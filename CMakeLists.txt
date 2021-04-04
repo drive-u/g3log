@@ -89,9 +89,11 @@ IF ( NOT VERSION )
    message( STATUS "version base: ${VERSION-BASE}" )
    message( STATUS "version remainder: ${VERSION-REMAINDER}" )
    SET(BUILD_NUMBER ${VERSION-BASE})
-   SET(VERSION ${MAJOR_VERSION}.${MINOR_VERSION}.${BUILD_NUMBER}-${VERSION-REMAINDER})
+   SET(SOFT_VERSION ${MAJOR_VERSION}.${MINOR_VERSION}.${BUILD_NUMBER}-${VERSION-REMAINDER})
+   SET(VERSION ${MAJOR_VERSION})
 ENDIF()
-message( STATUS "Software Version: ${VERSION}" )
+message( STATUS "Software Version: ${SOFT_VERSION}" )
+message( STATUS "SO name: ${VERSION}" )
 
 # ============================================================================
 # G3LOG OPTIONAL FEATURES
